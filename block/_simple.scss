@@ -1,0 +1,100 @@
+.simple {
+  width: 100%;
+
+  &-container {
+    @include flex;
+  }
+
+  &-img {
+    position: relative;
+    top: 50px;
+    width: 305px;
+    height: 627px;
+  }
+
+  &-right {
+    @include flex2;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin: 0 100px;
+  }
+
+  &-title {
+    font-family: rubik;
+    width: 621px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44.2px;
+    line-height: 52px;
+    color: #000000;
+  }
+
+  &-text {
+    font-family: hind madurai;
+    width: 550px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #0f0101;
+    opacity: 0.7;
+    margin: 30px 0;
+  }
+
+  &-list {
+    @include flex2;
+    gap: 20px;
+    flex-direction: column;
+    font-family: rubik;
+    font-weight: 500;
+    font-size: 23px;
+    margin: 30px 0;
+  }
+
+  &-item {
+    @include flex2;
+    gap: 30px;
+  }
+
+  &-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 1200px) {
+  .simple {
+    width: 90%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px auto;
+
+    .simple-title {
+      width: 100%;
+      font-size: 34px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .simple-img {
+      display: none;
+    }
+
+    .simple-text {
+      width: 90%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .simple-right {
+      width: 90%;
+      margin: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

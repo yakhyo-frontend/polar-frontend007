@@ -1,0 +1,208 @@
+.product {
+  width: 100%;
+  background-color: white;
+
+  &-container {
+    @include flex2;
+    flex-direction: column;
+  }
+
+  &-title {
+    font-family: "Hind Madurai";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44.2px;
+    line-height: 61px;
+    color: #150101;
+    margin: 100px 470px 0;
+  }
+
+  &-list {
+    @include flex2;
+    gap: 30px;
+    margin: 50px 0;
+  }
+
+  &-link-1 {
+    text-decoration: underline brown;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    font-family: hind madurai;
+  }
+
+  &-link {
+    font-family: hind madurai;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    opacity: 0.6;
+  }
+
+  .product-box {
+    @include flex;
+    gap: 170px;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-box-title {
+    @include box-title;
+  }
+
+  .product-box-text {
+    @include box-text;
+  }
+
+  .product-box-tag {
+    @include box-tag;
+  }
+
+  .product-box-tag span {
+    @include box-tag-span;
+  }
+}
+
+.product {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 80px;
+
+  &-container {
+    @include flex2;
+    flex-direction: column;
+    width: 1200px;
+    margin: auto;
+  }
+
+  &-title {
+    font-family: "Hind Madurai";
+    font-weight: 600;
+    font-size: 44.2px;
+    line-height: 61px;
+    color: #150101;
+    text-align: center; // Вместо огромного margin 470px
+    margin: 100px auto 0;
+  }
+
+  &-list {
+    @include flex2;
+    gap: 30px;
+    margin: 50px 0;
+    list-style: none;
+    flex-wrap: wrap; // Чтобы меню не вылетало
+  }
+
+  &-link-1 {
+    text-decoration: underline brown;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    font-family: "Hind Madurai";
+  }
+
+  &-link {
+    font-family: "Hind Madurai";
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  .product-boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px; // Расстояние между рядами товаров
+  }
+
+  .product-box {
+    @include flex;
+    gap: 50px; // Уменьшил со 170px, чтобы в 1200px влезало нормально
+  }
+
+  .product-left,
+  .product-right {
+    flex: 1;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .product-box-title {
+    @include box-title;
+  }
+  .product-box-text {
+    @include box-text;
+  }
+  .product-box-tag {
+    @include box-tag;
+  }
+  .product-box-tag span {
+    @include box-tag-span;
+  }
+}
+@media (max-width: 1200px) {
+  .container,
+  .intro-container,
+  .sugar-container,
+  .product-container,
+  .collection {
+    width: 90% !important;
+    margin: auto !important;
+  }
+
+  .product-box {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+
+    .product-left {
+      order: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .product-right {
+      order: 2;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .product-img {
+    width: 250px !important;
+    height: auto;
+  }
+
+  .sugar-img {
+    width: 280px !important;
+    margin: 20px auto;
+  }
+
+  .intro-img {
+    width: 260px !important;
+    margin: 20px auto;
+  }
+
+  .product-box-text,
+  .sugar-text,
+  .intro-text {
+    width: 100% !important;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}

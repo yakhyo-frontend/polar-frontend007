@@ -1,0 +1,121 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 1250px;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  background-color: #e392ad;
+  z-index: 100;
+  box-shadow: 5px 5px 20px white;
+
+  &-container,
+  &-list {
+    @include flex;
+  }
+
+  &-list {
+    gap: 30px;
+  }
+
+  &-link {
+    font-family: hind madurai;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #150101;
+
+    opacity: 0.6;
+    transition: all 0.7s ease;
+  }
+
+  &-link:hover {
+    transition: all 0.7s ease;
+    color: #d23166;
+  }
+
+  &-item span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    font-family: hind madurai;
+    color: #d23166;
+    transition: all 0.7s ease;
+  }
+
+  &-item span:hover {
+    transition: all 0.7s ease;
+    color: black;
+  }
+
+  &-btn {
+    width: 165px;
+    height: 49px;
+    background: #d23166;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: hind madurai;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 1s ease;
+  }
+
+  &-btn:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+  }
+
+  &-btn:active {
+    transition: all 0.4s ease;
+    background: black;
+  }
+
+  &-burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &-burger div {
+    width: 23px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: black;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    width: 90%;
+    margin: auto;
+
+    .navbar-container {
+      margin: auto;
+    }
+
+    .navbar-logo {
+      margin: 0 20px;
+    }
+
+    .navbar-list {
+      display: none;
+    }
+
+    .navbar-burger {
+      display: flex;
+      margin: 0 20px;
+    }
+
+    .navbar-btn {
+      display: none;
+    }
+  }
+}
