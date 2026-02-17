@@ -43,7 +43,7 @@
 @media (max-width: 1200px) {
   .intro {
     width: 90%;
-    margin: auto;
+    margin: 100px auto;
 
     &-container {
       flex-wrap: wrap;
@@ -70,7 +70,8 @@
     }
 
     &-btn {
-      margin: 0 100px;
+      width: 70%;
+      margin: 0 15%;
     }
   }
 }
